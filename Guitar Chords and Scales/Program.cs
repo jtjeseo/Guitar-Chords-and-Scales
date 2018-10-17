@@ -41,6 +41,8 @@ namespace Guitar_Chords_and_Scales.Controllers
             Console.WriteLine(URL);
             Console.ReadKey();
 
+            Chords.GetChords(URL);
+
             Chords.PrintChords(URL);
             GetScales.PrintScales(URL);
 

@@ -12,6 +12,16 @@ namespace Guitar_Chords_and_Scales.Controllers
     {
         private static HttpClient _client = new HttpClient();
 
+        public async Task GetChords(string url)
+        {
+
+        }
+
+        public ShowChords()
+        {
+
+        }
+
         public async Task<RecipeResponse> GetRecipe(ICollection<string> ingredients, string foodType, int count)
         {
             var builder = new StringBuilder();
