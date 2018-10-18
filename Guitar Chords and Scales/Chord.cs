@@ -1,10 +1,6 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System;
+using Newtonsoft.Json.Linq;
 using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Guitar_Chords_and_Scales.Controllers
 {
@@ -12,36 +8,40 @@ namespace Guitar_Chords_and_Scales.Controllers
     {
         private static HttpClient _client = new HttpClient();
 
-        public async Task GetChords(string url)
+        public async static void GetChords(string url)
         {
+            string URL = url;
 
-        }
+            //HttpClient
+            using (HttpClient client = new HttpClient())
+            using (HttpResponseMessage response = await client.GetAsync(URL))
+            using (HttpContent content = response.Content)
+            {
+                string JSONtext = await response.Content.ReadAsStringAsync();
+                Console.WriteLine("");
+                Console.WriteLine("JSON Preview:" + JSONtext.Substring(0, 50) + "........");
 
-        public ShowChords()
-        {
+                //try
+                //{
+                JArray JSONarray = JArray.Parse(JSONtext);
 
-        }
+                    foreach (var item in JSONarray)
+                    {
+                        Console.WriteLine(item.ToString());
+                    }
+                //}
 
-        public async Task<RecipeResponse> GetRecipe(ICollection<string> ingredients, string foodType, int count)
-        {
-            var builder = new StringBuilder();
-            builder.Append("http://www.recipepuppy.com/api/");
+                //catch
+                //{
+                    //Console.WriteLine("Something went wrong...");
+                //}
+                
+                //foreach (var File in articles)
+                //{
+                //    Console.WriteLine("{0}\t{1}\t{2}\t{3}", File.Chord, File.Root, File.Quality, File.Notes);
+                //}
+            }
 
-            var formattedIngredients = string.Join(",", ingredients);
-            builder.Append($"?i={formattedIngredients}");
-
-            //var formattedFoods = string.Join(",", foodType);
-            builder.Append($"&q={foodType}");
-
-            builder.Append($"&p={count}");
-
-            HttpResponseMessage response = null;
-            response = await _client.GetAsync(builder.ToString());
-
-            var responseString = await response.Content.ReadAsStringAsync();
-            var responseJson = JsonConvert.DeserializeObject<RecipeResponse>(responseString);
-
-            return await Task.FromResult(responseJson);
         }
     }
 }
