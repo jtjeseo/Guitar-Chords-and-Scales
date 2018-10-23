@@ -1,21 +1,19 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace Guitar_Chords_and_Scales.Controllers
 {
     public class Program
     {
-        public static void Main()
+        public static async Task Main()
         {
-
-
             var URL = Notes.CollectNotes();
 
             Console.WriteLine("");
             Console.WriteLine("Your URL is: " + URL);
             Console.ReadKey();
 
-
-            Chords.GetChords(URL);
+            await Chords.GetChords(URL);
 
             //Task T = new Task(Chords.GetChords(URL));
             //T.Start();
