@@ -5,7 +5,7 @@ namespace Guitar_Chords_and_Scales.Controllers
 {
     public class Program
     {
-        public static async Task Main()
+        public static void Main()
         {
             var URL = Notes.CollectNotes();
 
@@ -13,7 +13,7 @@ namespace Guitar_Chords_and_Scales.Controllers
             Console.WriteLine("Your URL is: " + URL);
             Console.ReadKey();
 
-            await Chords.GetChords(URL);
+            ChordsClient.GetChords(URL);
 
             //Task T = new Task(Chords.GetChords(URL));
             //T.Start();

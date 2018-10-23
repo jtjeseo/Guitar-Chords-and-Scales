@@ -2,10 +2,11 @@
 using Newtonsoft.Json.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace Guitar_Chords_and_Scales.Controllers
 {
-    class Chords
+    class ChordsClient
     {
         private static HttpClient _client = new HttpClient();
 
@@ -22,27 +23,22 @@ namespace Guitar_Chords_and_Scales.Controllers
                 Console.WriteLine("");
                 Console.WriteLine("JSON Preview:" + JSONtext.Substring(0, 50) + "........");
 
-                //convert JSON into arry
                 try
                 {
-                    JArray JSONarray = JArray.Parse(JSONtext);
-
-                    foreach (var item in JSONarray)
+                    var settings = new JsonSerializerSettings
                     {
-                        Console.WriteLine(item.ToString());
-                    }
+                        DefaultValueHandling = DefaultValueHandling.Include
+                    };
+
+                    //Convert JSON 
+                    var chords = JsonConvert.DeserializeObject<Theory>(JSONtext,settings);
+                    
+                    Console.WriteLine(chords);
                 }
 
                 catch
                 {
                     Console.WriteLine("Something went wrong...");
-                }
-                //Story array items into File.Chord and others
-
-                //Display variables
-                foreach (var File in articles)
-                {
-                    Console.WriteLine("{0}\t{1}\t{2}\t{3}", File.Chord, File.Root, File.Quality, File.Notes);
                 }
             }
         }

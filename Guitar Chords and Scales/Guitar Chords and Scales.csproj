@@ -61,10 +61,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Chord.cs" />
+    <Compile Include="A.cs" />
+    <Compile Include="Asharp.cs" />
+    <Compile Include="B.cs" />
+    <Compile Include="C.cs" />
+    <Compile Include="ChordClient.cs" />
+    <Compile Include="Chords.cs" />
+    <Compile Include="Csharp.cs" />
+    <Compile Include="D.cs" />
+    <Compile Include="Dsharp.cs" />
+    <Compile Include="E.cs" />
+    <Compile Include="F.cs" />
+    <Compile Include="Fsharp.cs" />
+    <Compile Include="G.cs" />
+    <Compile Include="Gsharp.cs" />
     <Compile Include="Notes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Theory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
