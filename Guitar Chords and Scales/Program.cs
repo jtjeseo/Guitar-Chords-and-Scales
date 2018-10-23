@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Guitar_Chords_and_Scales.Controllers
 {
