@@ -22,8 +22,6 @@ namespace Guitar_Chords_and_Scales.Controllers
             using (HttpContent content = response.Content)
             {
                 string JSONtext = await response.Content.ReadAsStringAsync();
-                Console.WriteLine("");
-                Console.WriteLine("JSON Preview:" + JSONtext.Substring(0, 50) + "........");
 
                 try
                 {
