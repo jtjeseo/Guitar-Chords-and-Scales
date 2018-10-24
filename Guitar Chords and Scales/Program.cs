@@ -13,12 +13,12 @@ namespace Guitar_Chords_and_Scales.Controllers
 
             var result = Task.Run(async () => { return await ChordsClient.GetChords(URL); }).Result;
 
-            Console.WriteLine("These are the possible chords your notes could make:");
+            Console.WriteLine(Environment.NewLine+"These are the possible chords your notes could make:");
 
             Console.WriteLine(result.Chords.ToString());
-            Console.ReadLine();
-        
-        }
 
+            Console.ReadLine();
+
+        }
     }
 }

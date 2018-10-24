@@ -78,6 +78,7 @@
     <Compile Include="Notes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scales.cs" />
     <Compile Include="Theory.cs" />
   </ItemGroup>
   <ItemGroup>
