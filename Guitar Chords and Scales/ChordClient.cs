@@ -15,7 +15,7 @@ namespace Guitar_Chords_and_Scales.Controllers
             string URL = url;
 
             Theory chords = new Theory();
-            
+
             //HttpClient
             using (HttpClient client = new HttpClient())
             using (HttpResponseMessage response = await client.GetAsync(URL))
@@ -31,14 +31,12 @@ namespace Guitar_Chords_and_Scales.Controllers
                     };
 
                     //Convert JSON into object chords
-                    chords = JsonConvert.DeserializeObject<Theory>(JSONtext,settings);
-
-
+                    chords = JsonConvert.DeserializeObject<Theory>(JSONtext, settings);
                 }
 
                 catch
                 {
-                    Console.WriteLine("Something went wrong...");
+                    Console.WriteLine(Environment.NewLine+"Couldn't convert the results into text.");
                 }
             }
             return chords;

@@ -8,6 +8,7 @@ namespace Guitar_Chords_and_Scales.Controllers
     {
         public static void Main()
         {
+            //ASCII FUN
             Console.WriteLine(@".__   __.   ______   .___________. _______     _______.   .___________.  ______   ");
             Console.WriteLine(@"|  \ |  |  /  __  \  |           ||   ____|   /       |   |           | /  __  \  ");
             Console.WriteLine(@"|   \|  | |  |  |  | `---|  |----`|  |__     |   (----`   `---|  |----`|  |  |  | ");
@@ -23,22 +24,29 @@ namespace Guitar_Chords_and_Scales.Controllers
             Console.WriteLine(@" \______||__|  |__|  \______/  | _| `._____||_______/ |_______/    ");
             Console.WriteLine(@"                                                                   ");
 
+            Console.WriteLine(@"+---------------------------------------------------------------------+");
+            Console.WriteLine(@"|                       Possible Notes to enter                       |");
+            Console.WriteLine(@"|                                                                     |");
+            Console.WriteLine(@"|             A A# Bb B C C# Db D D# Eb F F# Gb G G# Ab               |");
+            Console.WriteLine(@"|                                                                     |");
+            Console.WriteLine(@"+---------------------------------------------------------------------+");
+
             var URL = Notes.CollectNotes();
 
             ChordsClient.GetChords(URL);
 
             var result = Task.Run(async () => { return await ChordsClient.GetChords(URL); }).Result;
 
-            Console.WriteLine(Environment.NewLine+"These are the possible chords your notes could make:");
 
-            //Check if result has contents. If not then no chords
-            if (PropCheck.IsAnyNullOrEmpty(result))
+            //Check if result has contents. If not then no chords.
+            if (result.Chords != null)
             {
+                Console.WriteLine(Environment.NewLine + "These are the possible chords your notes could make:");
                 Console.WriteLine(result.Chords.ToString());
             }
             else
             {
-                Console.WriteLine("There were no chords found with your notes. Press enter to exit");
+                Console.WriteLine(Environment.NewLine+"There were no chords found with your notes. Press enter to exit");
                 Console.ReadLine();
                 Environment.Exit(1);
             }

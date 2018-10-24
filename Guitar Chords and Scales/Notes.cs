@@ -28,6 +28,7 @@ namespace Guitar_Chords_and_Scales
                         //Get out of loop if they enter "Q"
                         if (response == "Q")
                         {
+                            Console.WriteLine("──────────────────────────────────────────────────────────────");
                             break;
                         }
                         // Replaces a # sign with the correct encoded %23 character for the URL API
@@ -41,7 +42,7 @@ namespace Guitar_Chords_and_Scales
                     }
                     else
                     {
-                        Console.WriteLine("Please enter a note like 'A' or 'C#' or 'Bb'..."+Environment.NewLine);
+                        Console.WriteLine("Please enter an uppercase note like 'A' or 'C#' or 'Bb'..."+Environment.NewLine);
                         continue;
                     }
                 }

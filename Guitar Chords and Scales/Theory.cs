@@ -9,6 +9,6 @@ namespace Guitar_Chords_and_Scales
     public class Theory
     {
         public Chords Chords { get; set; }
-        public Scales Scales { get; set; } 
+        public Scales Scales { get; set; }
     }
 }
