@@ -31,7 +31,7 @@ namespace Guitar_Chords_and_Scales.Controllers
 
             Console.WriteLine(Environment.NewLine+"These are the possible chords your notes could make:");
 
-            //Check if result has contents
+            //Check if result has contents. If not then no chords
             if (PropCheck.IsAnyNullOrEmpty(result))
             {
                 Console.WriteLine(result.Chords.ToString());
