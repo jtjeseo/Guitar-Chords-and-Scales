@@ -31,7 +31,17 @@ namespace Guitar_Chords_and_Scales.Controllers
 
             Console.WriteLine(Environment.NewLine+"These are the possible chords your notes could make:");
 
-            Console.WriteLine(result.Chords.ToString());
+            //Check if result has contents
+            if (PropCheck.IsAnyNullOrEmpty(result))
+            {
+                Console.WriteLine(result.Chords.ToString());
+            }
+            else
+            {
+                Console.WriteLine("There were no chords found with your notes. Press enter to exit");
+                Console.ReadLine();
+                Environment.Exit(1);
+            }
 
             //Store results into a file specified by user
             try
@@ -44,6 +54,7 @@ namespace Guitar_Chords_and_Scales.Controllers
                     var userPath = Console.ReadLine() + "\\Chords.txt";
                     File.WriteAllText(userPath, result.Chords.ToString());
                     Console.WriteLine("Check " + userPath + " for your file");
+                    Console.ReadLine();
                 }
                 else
                 {

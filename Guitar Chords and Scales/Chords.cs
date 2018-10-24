@@ -942,9 +942,9 @@ namespace Guitar_Chords_and_Scales
                 {
                     sb.Append("G# dominant9th: " + Gsharp.dominant9th + Environment.NewLine);
                 }
-                if (Asharp.JimiHendrix != null)
+                if (Gsharp.JimiHendrix != null)
                 {
-                    sb.Append("G# JimiHendrix: " + Asharp.JimiHendrix + Environment.NewLine);
+                    sb.Append("G# JimiHendrix: " + Gsharp.JimiHendrix + Environment.NewLine);
                 }
                 else
                 {
