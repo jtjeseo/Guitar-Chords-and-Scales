@@ -18,8 +18,9 @@ namespace Guitar_Chords_and_Scales
                 try
                 {
                     //Ask for notes they would like. Let them know it can be for chords or scales
-                    Console.WriteLine("Enter a single note that you would like a chord or scale for then press enter (enter Q to to get result)... ");
+                    Console.WriteLine(Environment.NewLine+ "Enter a single music note that you would like possible chords for then press enter (enter Q to get result)... ");
                     response = Console.ReadLine();
+
 
                     if (response.Contains("A") || response.Contains("A#") || response.Contains("Bb") || response.Contains("B") || response.Contains("C") || response.Contains("C#") || response.Contains("Db") || response.Contains("D") || response.Contains("D#") || response.Contains("Eb") || response.Contains("E") || response.Contains("F") || response.Contains("F#") || response.Contains("Gb") || response.Contains("G") || response.Contains("G#") || response.Contains("Ab") || response.Contains("Q"))
                     {
