@@ -15,12 +15,11 @@ namespace Guitar_Chords_and_Scales.Controllers
 
             ChordsClient.GetChords(URL);
 
-            //Task T = new Task(Chords.GetChords(URL));
-            //T.Start();
-            //Console.WriteLine("Json data........");
-            //Console.ReadLine();
+            var result = Task.Run(async () => { return await ChordsClient.GetChords(URL); }).Result;
 
+            Console.WriteLine(result.Chords.ToString());
             Console.ReadLine();
+        
         }
 
     }

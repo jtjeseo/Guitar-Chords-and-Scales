@@ -10,10 +10,12 @@ namespace Guitar_Chords_and_Scales.Controllers
     {
         private static HttpClient _client = new HttpClient();
 
-        public async static Task GetChords(string url)
+        public async static Task<Theory> GetChords(string url)
         {
             string URL = url;
 
+            Theory chords = new Theory();
+            
             //HttpClient
             using (HttpClient client = new HttpClient())
             using (HttpResponseMessage response = await client.GetAsync(URL))
@@ -30,10 +32,10 @@ namespace Guitar_Chords_and_Scales.Controllers
                         DefaultValueHandling = DefaultValueHandling.Include
                     };
 
-                    //Convert JSON 
-                    var chords = JsonConvert.DeserializeObject<Theory>(JSONtext,settings);
-                    
-                    Console.WriteLine(chords);
+                    //Convert JSON into object chords
+                    chords = JsonConvert.DeserializeObject<Theory>(JSONtext,settings);
+
+
                 }
 
                 catch
@@ -41,6 +43,7 @@ namespace Guitar_Chords_and_Scales.Controllers
                     Console.WriteLine("Something went wrong...");
                 }
             }
+            return chords;
         }
     }
 }

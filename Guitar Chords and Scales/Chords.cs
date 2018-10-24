@@ -27,5 +27,25 @@ namespace Guitar_Chords_and_Scales
         public G G { get; set; }
         [JsonProperty("G#")]
         public Gsharp Gsharp { get; set; }
+
+
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            if (A != null)
+            {
+                sb.Append(A.major)
+                    .Append(A.major6)
+                    .Append(A.major7)
+                    .Append(A.major9)
+                    .Append(A.major11);
+
+
+
+            }
+            return sb.ToString();
+        }
     }
 }
