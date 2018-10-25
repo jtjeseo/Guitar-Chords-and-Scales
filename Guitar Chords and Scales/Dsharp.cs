@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 
 
-namespace Guitar_Chords_and_Scales
+namespace NotesToChords
 {
     [JsonObject("D#")]
     public class Dsharp

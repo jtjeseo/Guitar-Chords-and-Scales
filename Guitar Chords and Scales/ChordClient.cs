@@ -4,7 +4,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace Guitar_Chords_and_Scales.Controllers
+namespace NotesToChords.Controllers
 {
     class ChordsClient
     {

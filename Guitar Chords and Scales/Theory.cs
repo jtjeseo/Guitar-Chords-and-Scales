@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Guitar_Chords_and_Scales
+namespace NotesToChords
 {
     public class Theory
     {

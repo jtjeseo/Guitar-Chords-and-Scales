@@ -2,7 +2,7 @@
 using System.IO;
 using System.Threading.Tasks;
 
-namespace Guitar_Chords_and_Scales.Controllers
+namespace NotesToChords.Controllers
 {
     public class Program
     {

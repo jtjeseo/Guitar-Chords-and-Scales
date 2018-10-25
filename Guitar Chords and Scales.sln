@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guitar Chords and Scales", "Guitar Chords and Scales\Guitar Chords and Scales.csproj", "{CA5D95B2-4155-4990-940B-256F4F0C85C9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotesToChords", "Guitar Chords and Scales\NotesToChords.csproj", "{CA5D95B2-4155-4990-940B-256F4F0C85C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
