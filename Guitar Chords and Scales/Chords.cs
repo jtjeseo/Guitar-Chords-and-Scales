@@ -29,7 +29,7 @@ namespace Guitar_Chords_and_Scales
         public Gsharp Gsharp { get; set; }
 
 
-
+        //Override ToString to build string based on contents of properties
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
