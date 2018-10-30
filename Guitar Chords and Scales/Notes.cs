@@ -13,6 +13,7 @@ namespace NotesToChords
             string Answer = "";
             string i = "";
             string response = "";
+            List<string> ValidNote = new List<string>() { "A", "A#", "Bb", "B", "C", "C#", "Db", "D", "D#", "Eb", "E", "F", "F#", "Gb", "G", "G#", "Ab", "Q"};
             while (i != "Q")
             {
                 try
@@ -22,7 +23,7 @@ namespace NotesToChords
                     response = Console.ReadLine();
 
 
-                    if (response.Contains("A") || response.Contains("A#") || response.Contains("Bb") || response.Contains("B") || response.Contains("C") || response.Contains("C#") || response.Contains("Db") || response.Contains("D") || response.Contains("D#") || response.Contains("Eb") || response.Contains("E") || response.Contains("F") || response.Contains("F#") || response.Contains("Gb") || response.Contains("G") || response.Contains("G#") || response.Contains("Ab") || response.Contains("Q"))
+                    if ( ValidNote.Contains(response))
                     {
 
                         //Get out of loop if they enter "Q"

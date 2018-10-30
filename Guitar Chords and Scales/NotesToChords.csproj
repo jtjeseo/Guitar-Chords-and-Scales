@@ -102,6 +102,7 @@
     <None Include="App.config" />
     <None Include="Guitar Chords and Scales_TemporaryKey.pfx" />
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\NotesToChords - Web Deploy.pubxml" />
     <None Include="Properties\webjob-publish-settings.json" />
   </ItemGroup>
   <ItemGroup>
