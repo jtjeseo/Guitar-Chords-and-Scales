@@ -13,7 +13,11 @@ namespace NotesToChords
             string Answer = "";
             string i = "";
             string response = "";
+
+            //List of possible answers
             List<string> ValidNote = new List<string>() { "A", "A#", "Bb", "B", "C", "C#", "Db", "D", "D#", "Eb", "E", "F", "F#", "Gb", "G", "G#", "Ab", "Q"};
+
+            //Check response against ValidNote
             while (i != "Q")
             {
                 try
