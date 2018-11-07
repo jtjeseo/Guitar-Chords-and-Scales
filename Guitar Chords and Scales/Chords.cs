@@ -34,11 +34,6 @@ namespace NotesToChords
         {
             StringBuilder sb = new StringBuilder();
 
-            //if (A == null && Asharp == null && B == null && C == null && Csharp == null && D == null && Dsharp == null && E == null && F == null && Fsharp == null && G == null && Gsharp == null)
-            //{
-            //    sb.Append("No chords were found for the note(s) you provided" + Environment.NewLine);
-            //}
-
             //Build string based on properties that are populated or not with chords
             if (A != null)
             {
