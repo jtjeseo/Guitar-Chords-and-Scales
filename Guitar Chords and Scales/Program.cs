@@ -37,7 +37,6 @@ namespace NotesToChords.Controllers
 
             var result = Task.Run(async () => { return await ChordsClient.GetChords(URL); }).Result;
 
-
             //Check if result has contents. If not then no chords.
             if (result.Chords != null)
             {
